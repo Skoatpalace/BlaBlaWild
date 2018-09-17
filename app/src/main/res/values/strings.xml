@@ -11,4 +11,5 @@
     <string name="search">SEARCH</string>
     <string name="search_an_itinerary">Search an itinerary</string>
     <string name="titleDestination"><![CDATA[%s  >>  %s]]></string>
+    <string name="select_date">Select date</string>
 </resources>
