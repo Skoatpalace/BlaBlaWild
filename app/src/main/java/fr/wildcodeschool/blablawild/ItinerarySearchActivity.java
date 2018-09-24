@@ -1,9 +1,12 @@
 package fr.wildcodeschool.blablawild;
 
 import android.app.DatePickerDialog;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.icu.util.TimeZone;
+import android.icu.util.ULocale;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,29 +14,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
-import java.util.Date;
+
 
 public class ItinerarySearchActivity extends AppCompatActivity {
     private static final String TAG =  "ItinerarySearchActivity";
 
-    private EditText mDisplayDate;
+    /*private EditText mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_search);
-        mDisplayDate = findViewById(R.id.edit_date);
+        /*mDisplayDate = findViewById(R.id.edit_date);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar cal = Calendar.getInstance();
+                android.icu.util.Calendar cal = android.icu.util.Calendar.getInstance();
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
@@ -60,17 +62,23 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 String date = dayOfMonth + "/" + month + "/" +year;
                 mDisplayDate.setText(date);
 
+            };*/
+        }
+        public void onStart(){
+            super.onStart();
+            EditText mDisplayDate = findViewById(R.id.edit_date);
+            mDisplayDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if(hasFocus){
+                        DateDialog dialog = new DateDialog(v);
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        dialog.show(ft, "DatePicker");
+                }
             }
-        };
 
 
-
-
-
-
-
-
-
+        });
 
 
         Button buttonItinerary = findViewById(R.id.button_itinerary);
