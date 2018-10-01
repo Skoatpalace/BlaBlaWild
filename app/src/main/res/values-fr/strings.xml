@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlaBlaWild</string>
+    <string name="search_text">Rechercher</string>
+    <string name="toastText">Merci d\'indiquer votre depart et votre destination !</string>
+    <string name="departureText">Depart</string>
+    <string name="departure">Depart</string>
+    <string name="destinationText">Destination</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="search">RECHERCHER</string>
+    <string name="search_an_itinerary">Rechercher un itinéraire</string>
+    <string name="select_date">Selectionner la date</string>
+</resources>

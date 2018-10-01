@@ -50,7 +50,7 @@
         android:id="@+id/date_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="31/12/1970  03:30 AM"
+        android:text="@string/date_number"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 

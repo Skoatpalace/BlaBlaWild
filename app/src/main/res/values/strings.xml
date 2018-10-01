@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BlaBlaWild</string>
     <string name="search_text">Search</string>
@@ -7,9 +8,10 @@
     <string name="destinationText">Destination</string>
     <string name="destination">Destination</string>
     <string name="date">Date</string>
-    <string name="dateExemple">01/01/1970</string>
+    <string name="dateExemple" translatable="false">01/01/1970</string>
     <string name="search">SEARCH</string>
     <string name="search_an_itinerary">Search an itinerary</string>
-    <string name="titleDestination"><![CDATA[%s  >>  %s]]></string>
+    <string name="titleDestination" translatable="false"><![CDATA[%s  >>  %s]]></string>
     <string name="select_date">Select date</string>
+    <string name="date_number" translatable="false">31/12/1970 03:30 AM</string>
 </resources>
